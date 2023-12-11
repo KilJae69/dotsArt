@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-rows: min-content 100vh repeat(6, min-content);
+  grid-template-columns: 1fr repeat(8, minmax(min-content, 15rem)) 1fr;
+  width: min(100%, $container-width);
+  margin-inline: auto;
+  background-color: $bg-color;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery {
+  grid-row: 6 / 7;
+  grid-column: 2 / 10;
+}
+.testimonials {
+  grid-row: 7 / 8;
+  grid-column: 2 / 10;
+}
+

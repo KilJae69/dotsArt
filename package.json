@@ -1,0 +1,22 @@
+{
+  "name": "dotsart",
+  "version": "1.0.0",
+  "description": "Ručni rad mandala, prezentacija rukotvorina tehnike tačkanja i prodaja",
+  "scripts": {
+    "compile:sass": "sass src/sass/main.scss src/css/main.css -w",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "adi",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "fslightbox": "^3.4.1",
+    "swiper": "^11.0.5"
+  }
+}

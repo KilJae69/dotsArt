@@ -1,0 +1,54 @@
+//////////VARIABLES/////////////
+$font-primary: "Nunito", sans-serif;
+$font-heading: "Baloo 2", sans-serif;
+
+$font-weight-small:300;
+$font-weight-normal:400;
+$font-weight-bold:700;
+
+$container-width: 200rem;
+$nav-height: 10rem;
+
+$color-primary-dark: #c63663;
+$color-primary-light: #e29bb1;
+
+$color-secondary-dark: #ef6a00;
+$color-secondary-light: #f28733;
+
+$color-tertiary: #2c3e50;
+
+$color-white: #fff;
+$color-black: #000;
+$color-neutral: #f0f0f0;
+$color-dark-text: #333;
+$color-accent: #cccccc;
+$bg-color: #f8f8f1;
+$bg-color-footer: #2c3e50;
+$bg-color-section-pink: #f7eaea;
+
+$mb-tiny: 1rem;
+$mb-small: 2rem;
+$mb-medium: 4rem;
+$mb-large: 6rem;
+$mb-huge: 8rem;
+$mb-super: 10rem;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //10px/16px =62.5% -> 1rem = 10px;
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  line-height: 1.4;
+  overflow-x: hidden;
+}

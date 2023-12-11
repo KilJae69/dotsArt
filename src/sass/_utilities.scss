@@ -1,0 +1,47 @@
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+.sidenav-open {
+  height: 100vh;
+  overflow-y: hidden;
+  padding-right: 15px; 
+}
+
+.custom-shape-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+.custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-height: 10vw;
+}
+
+.custom-shape-divider .shape-fill {
+    fill: #F8F8F1;
+}
+
+ .margin-bottom-large {
+  margin-bottom: 6rem;
+ }
+
+

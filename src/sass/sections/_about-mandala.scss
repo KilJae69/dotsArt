@@ -1,0 +1,57 @@
+.about-us--mandala {
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+  margin-top: $mb-medium;
+  padding-bottom: $mb-huge;
+  //background-color: #f7eaea;
+  background: $bg-color-section-pink;
+ 
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 52% 100%, 0 89%);
+  position: relative;
+
+
+  &__link {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.5rem, 0.5vw + 1rem, 2.5rem);
+    font-style: italic;
+  }
+
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    fill: $color-primary-dark;
+  }
+}
+
+.about-us__text-wrapper--mandala {
+  grid-column: 2 / 3;
+  grid-row: 2;
+
+  display: grid;
+  grid-template-rows: min-content;
+  gap: 5rem; 
+}
+
+.about-us__heading--mandala {
+  margin-bottom: $mb-medium;
+  margin-top: $mb-huge;
+}
+
+@media only screen and (max-width: 75em) {
+  .about-us--mandala {
+    margin-bottom: $mb-medium;
+
+  }
+  .about-us__text-wrapper--mandala {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: grid;
+  }
+
+  .about-us__heading--mandala {
+    margin-bottom: $mb-medium;
+    margin-top: $mb-medium;
+  }
+}

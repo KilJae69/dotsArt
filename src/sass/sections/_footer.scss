@@ -1,0 +1,136 @@
+.footer {
+  position: relative;
+  grid-row: 8 / 9;
+  grid-column: 1 / -1;
+  padding-top: $mb-small;
+  padding-bottom: $mb-large;
+  background: radial-gradient(circle, rgba(72,104,136,1) 13%, rgba(44,62,80,1) 78%);
+  display: grid;
+  grid-template-columns: 1fr minmax(30rem, 2fr) 1fr;
+ 
+
+  &__heading {
+    grid-column: 2/ 3;
+    text-align: center;
+    margin-top: max(2rem, 5vw);
+    margin-inline: $mb-small;
+  }
+
+  &__text {
+    padding: 2rem;
+    font-size: clamp(1.5rem, 1vw + 1rem, 3rem);
+    text-align: justify;
+    line-height: 1.7;
+    letter-spacing: 2px;
+    color: $color-white;
+
+    &-span {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    &--sweep {
+      background: linear-gradient(90deg, $color-white, $color-primary-dark);
+      background-size: 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent; /* For Safari */
+      animation: sweep 3s linear infinite;
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    margin: $mb-medium;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s;
+    color: $color-white;
+    text-align: center;
+    font-weight: $font-weight-bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__icon {
+    width: max(2vw + 1rem, 4rem);
+    height: max(2vw + 1rem, 4rem);
+    margin-bottom: $mb-small;
+  }
+
+  &__logo-wrapper {
+    grid-row: 3 /4;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      margin-bottom: $mb-small;
+    }
+  }
+
+  &__logo-text {
+    transform: translateX(2rem);
+    font-weight: $font-weight-bold;
+  }
+
+  &__logo {
+    width: 20rem;
+  }
+
+  &__copyright {
+    grid-row: 4/ 5;
+    grid-column: 2/ 3;
+    text-align: center;
+    position: relative;
+    font-size: clamp(1rem, 0.4vw + 1rem, 1.3rem);
+    margin-top: $mb-medium;
+  }
+
+  &__line {
+    background-color: $color-accent;
+    display: block;
+    height: 1px;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .footer {
+    &__heading {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+@keyframes sweep {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

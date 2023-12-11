@@ -1,0 +1,177 @@
+.testimonials {
+  grid-row: 7 / 8;
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  background-image: linear-gradient(
+      to right,
+      rgba($bg-color, 0.9),
+      rgba($bg-color, 0.9)
+    ),
+    url(../assets/img/slike-pozadine/mandala-bg-img.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__header {
+    grid-column: 2 / 3;
+    text-align: center;
+    margin-top: max(2rem, 4vw + 1rem);
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.slider {
+  background-color: transparent;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  width: max(30rem, 50vw);
+  height: 47rem;
+
+  overflow: hidden;
+
+  position: relative;
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    font-family: inherit;
+    color: #333;
+    border-radius: 50%;
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 3.25rem;
+    cursor: pointer;
+
+    &--left {
+      left: 0.3rem;
+    }
+
+    &--right {
+      right: 0.3rem;
+    }
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  &__dot {
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:not(&:last-child) {
+      margin-right: 1.75rem;
+    }
+
+    &--active {
+      background-color: $color-primary-dark;
+      opacity: 1;
+    }
+  }
+}
+
+.slide {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s;
+}
+
+.testimonial {
+  width: 65%;
+
+  &__title {
+    font-size: clamp(2.25rem, 1vw + 1rem, 3rem);
+    font-weight: $font-weight-normal;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -2rem;
+      left: -5rem;
+      line-height: 1;
+      font-size: clamp(10rem, 5vw + 1rem, 15rem);
+      font-family: inherit;
+      color: $color-primary-dark;
+    }
+  }
+
+  &__text {
+    font-size: clamp(1.4rem, 0.5vw + 1rem, 2.5rem);
+    margin-bottom: 3.5rem;
+    color: #666;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+
+  &__author {
+    margin-left: 3rem;
+    font-style: normal;
+
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    column-gap: 2rem;
+  }
+
+  &__photo {
+    grid-row: 1 / span 2;
+    width: 6.5rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 1.7rem;
+    font-weight: $font-weight-normal;
+    align-self: end;
+    margin: 0;
+  }
+
+  &__location {
+    font-size: 1.5rem;
+  }
+}
+
+//////////#Media//////////////////
+@media only screen and (max-width: 81.25em) {
+  .slider {
+    grid-column: 1 / -1;
+    width: 100%;
+    position: relative;
+  }
+
+  .testimonials__header {
+    grid-column: 1 / -1;
+  }
+}
